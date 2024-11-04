@@ -111,7 +111,7 @@ while getopts "f:o:-:" opt; do
         exit 1
       fi
       echo Overriding default pwd value
-      output=$(pwd)/$4
+      output=$4
       ;;
     -)
       case "${OPTARG}" in
@@ -132,15 +132,12 @@ done
 flush $output
 echo Dirs created/rewritten: $dirs_created. Files created/rewritten: $files_created. Dirs removed: $dirs_removed. Files removed: $files_removeda
 
-
-
-
-
 if [[ -z $SUDO_USER ]]; then
   echo You have fucked up permissions btw, cause you did not read the file beginning. It is NOT recommended to run this as bare root or sudo as root. Run this as user in sudo
 else
   echo chown: Nice, it is all successful, you own the dir backup now type ls -al to make sure
-  chown $SUDO_USER:$SUDO_USER backup
+  chown -R $SUDO_USER:$SUDO_USER $output/backup
+  # Do not forget to chown the root folders BACK TO ROOT WHEN YOU DECIDE TO RESTORE SOME FILES to root. You can omit rechowning for home (if user not changed)
 fi
 
 
