@@ -28,6 +28,7 @@
     "max-length": 75,
     "separate-outputs": true,
     "format": "     {title}",
+    "on-click": "wofi --show drun -i"
 },
 
 "clock": {
