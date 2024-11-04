@@ -42,6 +42,7 @@ window#waybar {
   background-color: #544f56;
 }
 #battery,
+#custom-power,
 #window {
   background-color: #6E56AF;
   border-radius: 15px;

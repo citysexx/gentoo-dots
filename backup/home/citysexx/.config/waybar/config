@@ -7,7 +7,7 @@
 
 "modules-left": ["hyprland/window"],
 "modules-center": ["hyprland/workspaces"],
-"modules-right":  ["hyprland/language", "pulseaudio","backlight","network", "clock", "battery"],
+"modules-right":  ["hyprland/language", "pulseaudio","backlight","network", "clock", "battery", "custom/power"],
 
 "battery": {
   "states": {
@@ -79,5 +79,14 @@
   "format": "   {}",
   "format-en": "En",
   "format-ru": "Ru"
+},
+# dead simple power button
+"custom/power": {
+  "format": " ",
+  "on-click-middle": "loginctl hibernate",
+  "on-click-right": "loginctl suspend",
+  "on-click": "notify-send 'Hibernate: press MMB. Suspend: press RMB.\nP.S: You cannot reboot or shutdown from here, cuz wtf you need it so often?'",
+  "tooltip": true,
+  "tooltip-format": "Power: left click on me to see help"
 },
 }
