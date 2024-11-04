@@ -1,6 +1,9 @@
 # gentoo-dots
 Dotfiles and install advices for Gentoo Linux x Hyprland setup
 
+## Sexy looks
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
 ## Prerequisites:
 - Amd64-architecture computer
 - It is assumed you have installed Gentoo Linux using AMD64 Handbook and set up a minimal recommended configuartion described in this Handbook
