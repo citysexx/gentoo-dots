@@ -2,7 +2,7 @@
 Dotfiles and install advices for Gentoo Linux x Hyprland setup
 
 ## Sexy looks
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/citysexx/gentoo-dots/blob/main/2024-11-03-233347_hyprshot.png?raw=true)
 
 ## Prerequisites:
 - Amd64-architecture computer
