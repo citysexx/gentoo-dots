@@ -10,7 +10,7 @@ window="$(echo "$state" |
     gojq -r '.[] | select(.monitor != -1 ) | "\(.address)    \(.workspace.name)    \(.title)"' |
     sed "s|$current_addr|focused ->|" |
     sort -r |
-    tofi --fuzzy-match true --prompt-text ' ' --font-size=14
+    tofi --fuzzy-match true --prompt-text ' ' --font-size=12
 )"
 
 addr="$(echo "$window" | awk '{print $1}')"

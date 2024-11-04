@@ -11,7 +11,7 @@ workspace_list="$(echo "$workspaces" |
   gojq -r '.[] | select(.monitor != -1 ) | " \(.id):    :\(.monitor)(id:\(.monitorID))      :\(.windows)      :\(.hasfullscreen)      :\(.lastwindowtitle)"' |
   sed "s| $active_ws_id|\(active\)  $active_ws_id|" |
     sort -r | 
-    tofi --fuzzy-match true --prompt-text ' ' --font-size=14
+    tofi --fuzzy-match true --prompt-text ' ' --font-size=12
 )"
 
 # current chosen workspace
