@@ -1,0 +1,13 @@
+# Supposing you are user 'foo', you can list the paths like this, but they all should be absolute:
+/home/foo/.bashrc
+/home/foo/.gitconfig
+/home/foo/.config/some_dir
+
+# To backup the whole dir
+/etc/something
+
+# to backup a single file, go like this:
+/etc/moresomething/file.conf
+/var/log/some.log
+
+# copy this file somewhere convenient and remove comment lines

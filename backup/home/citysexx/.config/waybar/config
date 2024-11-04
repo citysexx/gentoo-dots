@@ -1,0 +1,82 @@
+{
+"layer": "top",
+"position": "top",
+"height": 10,
+"margin-bottom":0,
+"margin-top":0,
+
+"modules-left": ["hyprland/window"],
+"modules-center": ["hyprland/workspaces"],
+"modules-right":  ["hyprland/language", "pulseaudio","backlight","network", "clock", "battery"],
+
+"battery": {
+  "states": {
+  "warning": 30,
+  "critical": 15
+  },
+  "format": "{icon} &#8239;{capacity}%",
+  "format-charging": " &#8239;{capacity}%",
+  "format-plugged": " &#8239;{capacity}%",
+  "format-alt": "{icon}  {time}",
+  "format-icons": [" ", " ", " ", " ", " "]
+},
+"hyprland/workspaces": {
+     "sort-by-name": true,
+     "on-click": "activate"
+},
+"hyprland/window": {
+    "max-length": 75,
+    "separate-outputs": true,
+    "format": "     {title}",
+},
+
+"clock": {
+    "locale": "C", 
+    "format": "   {:%I:%M %p}",
+    "format-alt": "   {:%a,%b %d}" // Icon: calendar-alt
+},
+
+"network": {
+  "interval": 2,
+  "format-wifi": "    {signalStrength}%",
+  "format-ethernet": "  Wired Connected",
+  "format-linked": "Linked on {ipaddr}",
+  "format-disconnected": "	 Disconnected",
+  "format-disabled": "  No Service Enabled",
+  "tooltip": false,
+  "max-length": 20,
+  "min-length": 6,
+  "format-alt": "   {essid}",
+},
+
+"backlight": {
+    // "device": "acpi_video1",
+    "format": "{icon} &#8239;{percent}%",
+    "format-icons": [" "],
+    "on-scroll-down": "brightnessctl -c backlight set 1%-",
+    "on-scroll-up": "brightnessctl -c backlight set +1%"
+},
+"pulseaudio": {
+  // "scroll-step": 1, // %, can be a float
+  "format": "{icon}  {volume}% {format_source}",
+  "format-bluetooth": "{icon} {volume}% {format_source}",
+  "format-bluetooth-muted": "  {format_source}",
+  "format-muted": "  {format_source}",
+  "format-source": " {volume}%",
+  "format-source-muted": " ",
+  "format-icons": {
+    "headphone": " ",
+    "hands-free": " ",
+    "headset": "	 ",
+    "phone": " ",
+    "portable": " ",
+    "car": " ",
+    "default": [" ", " ", " "]
+  },
+},
+"hyprland/language": {
+  "format": "   {}",
+  "format-en": "En",
+  "format-ru": "Ru"
+},
+}
