@@ -110,8 +110,7 @@ while getopts "f:o:-:" opt; do
         echo You have specified a file, not a dir. Exiting...
         exit 1
       fi
-      
-      Overriding default pwd value
+      echo Overriding default pwd value
       output=$(pwd)/$4
       ;;
     -)
