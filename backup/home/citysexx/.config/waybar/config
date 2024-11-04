@@ -80,7 +80,7 @@
   "format-en": "En",
   "format-ru": "Ru"
 },
-# dead simple power button
+// dead simple power button
 "custom/power": {
   "format": " ",
   "on-click-middle": "loginctl hibernate",
