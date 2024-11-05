@@ -42,7 +42,7 @@
   "format-wifi": "    {signalStrength}%",
   "format-ethernet": "  Wired Connected",
   "format-linked": "Linked on {ipaddr}",
-  "format-disconnected": "	 Disconnected",
+  "format-disconnected": "   Disconnected",
   "format-disabled": "  No Service Enabled",
   "tooltip": false,
   "max-length": 20,
