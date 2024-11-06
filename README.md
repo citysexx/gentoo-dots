@@ -22,6 +22,7 @@ Dotfiles and install advices for Gentoo Linux x Hyprland setup
     - `noto-emoji`
     - `kitty`
     - `waybar`
+    - `feh`
 - Nerd Font (You can use any, but the dots are configured with InconsolataLGCNerdFont, which I share with you in fonts directory)
 
 ## Other packages
