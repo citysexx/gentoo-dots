@@ -15,10 +15,13 @@
   "critical": 15
   },
   "format": "{icon}",
-  "format-charging": "",
+  "format-charging": "{icon}",
   "format-plugged": "",
   "format-alt": "{icon}  {time}",
-  "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  "format-icons": {
+    "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+    }
 },
 "hyprland/workspaces": {
      "sort-by-name": true,
