@@ -14,11 +14,11 @@
   "warning": 30,
   "critical": 15
   },
-  "format": "{icon} &#8239;{capacity}%",
-  "format-charging": " &#8239;{capacity}%",
-  "format-plugged": " &#8239;{capacity}%",
+  "format": "{icon}",
+  "format-charging": "",
+  "format-plugged": "",
   "format-alt": "{icon}  {time}",
-  "format-icons": [" ", " ", " ", " ", " "]
+  "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
 },
 "hyprland/workspaces": {
      "sort-by-name": true,

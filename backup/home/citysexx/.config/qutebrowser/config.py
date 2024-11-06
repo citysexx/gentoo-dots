@@ -15,7 +15,8 @@ c.fonts.tooltip = '12pt InconsolataLGCNerdFont-Regular'
 c.fonts.statusbar = '12pt InconsolataLGCNerdFont-Regular'
 c.fonts.downloads = '12pt InconsolataLGCNerdFont-Regular'
 c.fonts.contextmenu = '12pt InconsolataLGCNerdFont-Regular'
-c.fonts.keyhint = '12pt InconsolataLGCNerdFont-Regular'
+c.fonts.keyhint = '14pt InconsolataLGCNerdFont-Regular'
+c.fonts.hints = '14pt InconsolataLGCNerdFont-Regular'
 c.fonts.default_family = [
     '12pt InconsolataLGCNerdFont-Regular', 
     '12pt InconsolataLGCNerdFont-Bold'
