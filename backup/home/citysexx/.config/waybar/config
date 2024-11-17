@@ -14,9 +14,9 @@
   "warning": 30,
   "critical": 15
   },
-  "format": "{icon}",
-  "format-charging": "{icon}",
-  "format-plugged": "",
+  "format": "{icon}  {capacity}%",
+  "format-charging": "{icon}  {capacity}%",
+  "format-plugged": " ",
   "format-alt": "{icon}  {time}",
   "format-icons": {
     "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
@@ -36,7 +36,7 @@
 
 "clock": {
     "locale": "C", 
-    "format": "   {:%I:%M %p}",
+    "format": "   {:%H:%M}",
     "format-alt": "   {:%a,%b %d}" // Icon: calendar-alt
 },
 
