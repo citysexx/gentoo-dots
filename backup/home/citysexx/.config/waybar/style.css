@@ -43,6 +43,7 @@ window#waybar {
   background-color: #544f56;
 }
 #custom-power,
+#custom-lock,
 #window {
   background-color: #6E56AF;
   border-radius: 15px;

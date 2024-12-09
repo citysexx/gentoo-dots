@@ -7,7 +7,7 @@
 
 "modules-left": ["hyprland/window"],
 "modules-center": ["hyprland/workspaces"],
-"modules-right":  ["hyprland/language", "pulseaudio","backlight","network", "clock", "battery", "custom/power"],
+"modules-right":  ["hyprland/language", "pulseaudio","backlight", "network", "clock", "battery", "custom/lock", "custom/power"],
 
 "battery": {
   "states": {
@@ -43,10 +43,10 @@
 "network": {
   "interval": 2,
   "format-wifi": "    {signalStrength}%",
-  "format-ethernet": "  Wired Connected",
+  "format-ethernet": "   Wired Connected",
   "format-linked": "Linked on {ipaddr}",
   "format-disconnected": "   Disconnected",
-  "format-disabled": "  No Service Enabled",
+  "format-disabled": "   No Service Enabled",
   "tooltip": false,
   "max-length": 20,
   "min-length": 6,
@@ -86,10 +86,18 @@
 // dead simple power button
 "custom/power": {
   "format": " ",
-  "on-click-middle": "loginctl hibernate",
-  "on-click-right": "loginctl suspend",
+  "on-click-middle": "grim -s 1.5 -l 0 ~/.cache/screenlock.png && hyprlock & sleep 5 && loginctl hibernate",
+  "on-click-right": "grim -s 1.5 -l 0 ~/.cache/screenlock.png && hyprlock & sleep 5 && loginctl suspend",
   "on-click": "notify-send 'Hibernate: press MMB. Suspend: press RMB.\nP.S: You cannot reboot or shutdown from here, cuz wtf you need it so often?'",
   "tooltip": true,
   "tooltip-format": "Power: left click on me to see help"
+},
+
+// dead simple lock button
+"custom/lock": {
+  "format": " ",
+  "on-click": "grim -s 1.5 -l 0 ~/.cache/screenlock.png && hyprlock",
+  "tooltip": true,
+  "tooltip-format": "Lock me"
 },
 }
