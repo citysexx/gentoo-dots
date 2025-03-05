@@ -1,0 +1,29 @@
+mouse_list_scroll_whole_page = "yes"
+lines_scrolled = "1"
+allow_for_physical_item_deletion = yes
+startup_screen = playlist
+screen_switcher_mode = playlist, visualizer
+startup_slave_screen = visualizer
+startup_slave_screen_focus = yes
+locked_screen_width_part = 60
+
+
+visualizer_data_source = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_in_stereo = "no"
+visualizer_fps = 60
+visualizer_color = 90, 91, 92, 231, 228, 218, 99, 104, 226, 220
+visualizer_type = "ellipse"
+visualizer_spectrum_smooth_look = yes
+
+progressbar_look = "▃▃▃"
+progressbar_color = "black"
+progressbar_elapsed_color = "green"
+statusbar_color = "5"
+
+now_playing_prefix = "$b$8 ➥ "
+now_playing_suffix = "$8$/b"
+
+centered_cursor = "yes"
+enable_window_title = "yes"
+

@@ -1,0 +1,67 @@
+* {
+  all: unset;
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-size: 14px;
+}
+
+.bar {
+  background-color: #282c34;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #44475a;
+}
+
+.workspaces {
+  padding: 5px;
+}
+
+.ws-button {
+  background-color: transparent;
+  color: #b0b4bc;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.ws-button:hover {
+  background-color: #6272a4;
+  color: #ffffff;
+}
+
+.music {
+  padding: 5px 15px;
+  font-weight: bold;
+  color: #50fa7b;
+}
+
+.system-info {
+  padding: 5px 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.metric-label {
+  color: #f1fa8c;
+}
+
+.metric scale trough highlight {
+  background-color: #bd93f9;
+  border-radius: 10px;
+}
+
+.metric scale trough {
+  background-color: #4e4e4e;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+

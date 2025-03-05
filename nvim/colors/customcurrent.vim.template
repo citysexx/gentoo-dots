@@ -1,0 +1,87 @@
+" Advanced Neovim colorscheme with 16 color palette and $colorN placeholders
+
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+" Background and foreground
+set background=dark
+hi Normal guifg=$colorf guibg=$color0         " Bright text on dark background
+hi NormalNC guifg=$colord guibg=$color1       " Non-current windows with soft color
+hi Comment guifg=$color8 gui=italic            " Dimmed comments, italicized
+hi CursorLine guibg=$color2                   " Highlighted line with moderate color
+hi CursorColumn guibg=$color3                 " Highlighted column with subtle color
+
+" Line numbers and status line
+hi LineNr guifg=$color7                       " Dimmed line numbers
+hi CursorLineNr guifg=$colorf guibg=$color2  " Current line number in bright color
+hi StatusLine guibg=$color4 guifg=$colorf    " Active status line with clear contrast
+hi StatusLineNC guibg=$colorc guifg=$color9   " Inactive status line with softer colors
+
+" Visual mode highlights with basic defaults
+hi Visual guibg=$colora guifg=$color0        " Light selection for contrast
+hi VisualNOS guibg=$color4 guifg=$color0      " Non-selected text in Visual mode
+
+" Search highlights
+hi Search guibg=$color9 guifg=$color0         " Highlight searches with a vivid red
+hi IncSearch guibg=$colorb guifg=$color0     " Incremental search with vibrant yellow
+
+" Error highlighting
+hi Error guifg=$color1                        " Errors in bright red
+hi ErrorMsg guibg=$color1 guifg=$colorf      " Error messages with bright foreground
+hi WarningMsg guifg=$color3                   " Warning messages in yellow
+hi MoreMsg guifg=$colorc                      " "More" messages with blue
+hi NonText guifg=$color7                      " Non-text characters in dimmed color
+
+" Syntax highlighting
+hi Keyword guifg=$color4                      " Keywords in bright cyan
+hi Statement guifg=$color5                    " Statements in bright magenta
+hi Function guifg=$color6                     " Functions in light blue
+hi Identifier guifg=$color7                   " Identifiers in standard white
+hi Type guifg=$color8                         " Types in light gray
+hi PreProc guifg=$color9                      " Preprocessors in light red
+hi Constant guifg=$colora                    " Constants in bright green
+hi Special guifg=$colorb                     " Special elements in bright yellow
+hi Operator guifg=$colorc                    " Operators in bright purple
+hi Title guifg=$colord                       " Titles in bright orange
+hi SpecialKey guifg=$colore                  " Special keys in bright blue
+hi Underlined guifg=$colorf gui=underline    " Underlined text in bright white
+
+" String and characters
+hi String guifg=$colord                      " Strings in orange
+hi Character guifg=$colore                   " Characters in teal
+hi Number guifg=$colorf                      " Numbers in bright white
+hi Boolean guifg=$color0                      " Booleans in dark black
+
+" Diff mode highlighting
+hi DiffAdd guibg=$color2 guifg=$colorf       " Added lines in green
+hi DiffChange guibg=$color3 guifg=$colorf    " Changed lines in blue
+hi DiffDelete guibg=$color1 guifg=$colorf    " Deleted lines in red
+hi DiffText guibg=$color4 guifg=$colorf      " Changed text in cyan
+
+" Sign column
+hi SignColumn guibg=$color5 guifg=$color6     " Signs in purple
+hi Delimiters guifg=$color7                   " Delimiters in gray
+
+" Filetype specific highlights
+hi NvimTreeNormal guifg=$color8 guibg=$color0  " Background and foreground for NvimTree
+hi NvimTreeFolderName guifg=$color9           " Folder names with a bold color
+hi NvimTreeFolderIcon guifg=$colora          " Folder icons color
+hi NvimTreeIndentMarker guifg=$color7         " Indentation markers in gray
+
+" Tab line highlights
+hi TabLine guibg=$colorb guifg=$color0       " Tab line with darker background
+hi TabLineSel guibg=$colorc guifg=$colorf   " Selected tab in bright color
+hi TabLineFill guibg=$colord guifg=$color0   " Fill area of tab line (inactive)
+
+" Pmenu (popup menu) highlights
+hi Pmenu guibg=$colore guifg=$color0         " Popup menu background and text color
+hi PmenuSel guibg=$colorf guifg=$color0      " Selected item in popup menu
+hi PmenuThumb guibg=$color6                   " Scrollbar color in popup menus
+
+" Additional customizations for a more dynamic appearance
+hi VertSplit guifg=$color8 guibg=$color0       " Vertical splits
+hi StatusLineTerm guifg=$colorf guibg=$color2 " Terminal status line with a bright highlight
+hi FloatBorder guifg=$colorf guibg=$color8    " Floating windows' border color
+hi NormalNC guifg=$color7 guibg=$color0        " Non-current windows' normal text and background
+

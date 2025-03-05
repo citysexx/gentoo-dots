@@ -1,0 +1,280 @@
+{
+"layer": "top",
+"position": "top",
+"height": 10,
+"margin-bottom":0,
+"margin-top":7,
+"margin-left":7,
+"margin-right":7,
+
+
+"group/left": {
+  "orientation": "horizontal",
+  "modules": [
+    "custom/gentoo", 
+    "clock", 
+    "cpu", 
+    "temperature", 
+    "disk", 
+    "memory"
+  ]
+},
+
+"group/center": {
+  "orientation": "horizontal",
+  "modules": ["hyprland/workspaces"]
+},
+
+"group/right": {
+  "orientation": "horizontal",
+  "modules": ["custom/wallpaper-carousel", "idle_inhibitor", "hyprland/language", "network", "backlight", "pulseaudio", "battery"]
+},
+
+
+"modules-left": ["group/left"],
+"modules-center": ["group/center"],
+"modules-right":  ["group/right"],
+
+"battery": {
+  "interval": 2,
+  "states": {
+  "warning": 40,
+  "critical": 20
+  },
+  "format": " {capacity:02d}",
+  "format-charging": " {capacity}",
+  "format-plugged": " ",
+  "format-alt": "{time} ({capacity}%)",
+  "format-icons": {
+    "default": [
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      "     "
+      ],
+    "charging": [
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      "     "
+      ],
+    },
+  "on-click-middle": "bash ~/.config/hypr/scripts/powermenu.sh",
+  "on-click-right": "notify-send 'Suck my dick'"
+},
+"hyprland/workspaces": {
+     "sort-by-name": true,
+     "on-click": "activate",
+     "on-scroll-up": "hyprctl dispatch workspace e-1",
+     "on-scroll-down": "hyprctl dispatch workspace e+1"
+},
+
+"custom/gentoo": {
+  "format": " Gentoo",
+  "on-click": "wofi --show drun -i"
+},
+
+"hyprland/window": {
+    "max-length": 15,
+    "min-length": 15,
+    "separate-outputs": true,
+    "format": "{title}",
+    "on-click": "/home/citysexx/.config/hypr/scripts/hyprwindows-see.sh"
+},
+
+"custom/windowiconizer": {
+  "format": "{} ",
+  "exec": "/home/citysexx/.config/hypr/scripts/window-iconizer.sh",
+  "interval": 1,
+  "on-click": "/home/citysexx/.config/hypr/scripts/hyprwindows-see.sh"
+
+},
+
+"clock": {
+    "locale": "C", 
+    "format": " {:%H:%M}",
+    "format-alt": " {:%a,%b %d}", // Icon: calendar-alt
+    "tooltip": true,
+    "tooltip-format": "Current datetime"
+},
+
+"network": {
+  "interval": 1,
+  "format-wifi": " {signalStrength}",
+  "format-ethernet": " On",
+  "format-linked": "On {ipaddr}",
+  "format-disconnected": " Off",
+  "format-disabled": " Err",
+  "tooltip": false,
+  "max-length": 25,
+  "min-length": 4,
+  "format-alt": " {essid}",
+  "on-click-middle": "foot -e nmtui connect"
+},
+
+"mpd": {
+    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}  {artist} - {title} ({album}) ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+    "format-disconnected": "Music daemon down",
+    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}  No music playing",
+    "max-length": 50,
+    "interval": 10,
+    "consume-icons": {
+        "on": " " // Icon shows only when "consume" is on
+    },
+    "random-icons": {
+        "off": "<span color=\"#a020f0\"></span> ", // Icon grayed out when "random" is off
+        "on": " "
+    },
+    "repeat-icons": {
+        "on": " "
+    },
+    "single-icons": {
+        "on": "1 "
+    },
+    "state-icons": {
+        "paused": "",
+        "playing": ""
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)"
+},
+
+"backlight": {
+    // "device": "acpi_video1",
+    "format": "{icon}{percent:02d}",
+    "format-icons": [" "],
+    "on-scroll-down": "brightnessctl -c backlight set 1%-",
+    "on-scroll-up": "brightnessctl -c backlight set +1%",
+    "states": {
+      "warning": 50,
+      "critical": 90
+    },
+},
+"pulseaudio": {
+  // "scroll-step": 1, // %, can be a float
+  "format": "{icon} {volume:02d}{format_source}",
+  "format-bluetooth": " {volume:02d}{format_source}",
+  "format-bluetooth-muted": "  {format_source}",
+  "format-muted": " {format_source}",
+  "format-source": "|{volume:02d} ",
+  "format-source-muted": " ",
+  "format-icons": {
+    "headphone": " ",
+    "hands-free": " ",
+    "headset": " ",
+    "phone": " ",
+    "portable": " ",
+    "car": " ",
+    "default": [" "]
+  },
+  "on-click-middle": "pavucontrol-qt",
+},
+"hyprland/language": {
+  "format": " {}",
+  "format-en": "En",
+  "format-ru": "Ru"
+},
+// dead simple power button
+"custom/power": {
+  "format": " ",
+  "on-click-middle": "grim -s 1.5 -l 0 ~/.cache/screenlock.png && hyprlock & sleep 5 && loginctl hibernate",
+  "on-click-right": "grim -s 1.5 -l 0 ~/.cache/screenlock.png && hyprlock & sleep 5 && loginctl suspend",
+  "on-click": "notify-send 'Hibernate: press MMB. Suspend: press RMB.\nP.S: You cannot reboot or shutdown from here, cuz wtf you need it so often?'",
+  "tooltip": true,
+  "tooltip-format": "Power: left click on me to see help"
+},
+
+// dead simple lock button
+"custom/lock": {
+  "format": " ",
+  "on-click": "grim -s 1.5 -l 0 ~/.cache/screenlock.png && hyprlock",
+  "tooltip": true,
+  "tooltip-format": "Lock me"
+},
+
+"custom/notifications": {
+  "format": " Hist",
+  "on-click": "makoctl restore",
+  "on-click-right": "makoctl dismiss -a",
+  "tooltip": true,
+  "tooltip-format": "LMB - Restore latest notification, RMB - Dismiss all notifications"
+},
+
+"idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+        "activated": " On",
+        "deactivated": " Off"
+    }
+  },
+"custom/cava": {
+    "exec": "~/.config/waybar/cava-internal.sh",
+    "interval": 0,
+    "restart-interval": 1,
+    "format": "{}",
+    "tooltip": false
+  },
+
+"custom/wallpaper-carousel": {
+    "on-click": "~/.config/hypr/scripts/wallpaper-carousel.sh",
+    "format": " Style",
+    "tooltip": true,
+    "tooltip-format": "Change wallpaper"
+  },
+
+"cpu": {
+    "format": " {usage:02d}",
+    "interval": 1,
+    "on-click": "foot -e htop",
+    "states": {
+      "warning": 70,
+      "critical": 90
+    },
+  },
+
+"disk": {
+    "interval": 5,
+    "format": " {percentage_used:02d}",
+    "on-click": "foot -e gdu /home",
+    "path": "/home",
+    "states": {
+      "warning": 70,
+      "critical": 90
+    },
+  },
+
+"memory": {
+    "interval": 5,
+    "format": " {percentage:02d}[{swapPercentage:02d}]",
+    "on-click": "foot -e htop",
+    "tooltip": true,
+    "tooltip-format": "Memory used: {used}G; Swap used: {swapUsed}G",
+    "states": {
+      "warning": 90,
+      "critical": 95
+    },
+  },
+"temperature": {
+    // "thermal-zone": 2,
+    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C ",
+    "format": " {temperatureC:02d}",
+    "tooltip": true,
+    "interval": 1,
+    "tooltip-format": "Current CPU temperature",
+    "on-click": "foot -e auto-cpufreq --stats"
+  },
+}

@@ -1,0 +1,56 @@
+(defwidget bar []
+  (centerbox :orientation "h"
+    (workspaces)
+    (music)
+    (system-info)))
+
+(defwidget workspaces []
+  (box :class "workspaces"
+       :orientation "h"
+       :spacing 8
+       :halign "start"
+    (button :class "ws-button" :onclick "wmctrl -s 0" 1)
+    (button :class "ws-button" :onclick "wmctrl -s 1" 2)
+    (button :class "ws-button" :onclick "wmctrl -s 2" 3)
+    (button :class "ws-button" :onclick "wmctrl -s 3" 4)
+    (button :class "ws-button" :onclick "wmctrl -s 4" 5)
+    (button :class "ws-button" :onclick "wmctrl -s 5" 6)
+    (button :class "ws-button" :onclick "wmctrl -s 6" 7)
+    (button :class "ws-button" :onclick "wmctrl -s 7" 8)
+    (button :class "ws-button" :onclick "wmctrl -s 8" 9)))
+
+(defwidget music []
+  (box :class "music"
+       :orientation "h"
+       :halign "center"
+    {music != "" ? "🎵 ${music}" : ""}))
+
+(defwidget system-info []
+  (box :class "system-info" :orientation "h"
+    (metric :label "🔊" :value volume :onchange "amixer -D pulse sset Master {}%")
+    (metric :label "" :value {EWW_RAM.used_mem_perc} :onchange "")
+    (metric :label "💾" :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)} :onchange "")
+    (label :text time)))
+
+(defwidget metric [label value onchange]
+  (box :class "metric"
+       :orientation "h"
+    (label :class "metric-label" :text label)
+    (scale :min 0 :max 100 :value value :active {onchange != ""} :onchange onchange)))
+
+(deflisten music :initial ""
+  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
+
+(defpoll volume :interval "1s"
+  "scripts/getvol")
+
+(defpoll time :interval "10s"
+  "date '+%H:%M %b %d, %Y'")
+
+(defwindow bar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "0%" :y "0%" :width "100%" :height "30px" :anchor "top center")
+  :reserve (struts :side "top" :distance "30px")
+  (bar))
+

@@ -1,0 +1,209 @@
+#waybar {
+    background-color: $background;
+    border-radius: 15px;
+    margin: 8px 10px;
+    padding: 6px 12px;
+    min-height: 40px;
+    font-family: "FiraCode Nerd Font", monospace;
+    font-size: 15px;
+}
+
+#workspaces {
+    margin: 0px 12px;
+    font-family: "FiraCode Nerd Font", monospace;
+    font-size: 15px;
+}
+
+#workspaces button {
+    font-family: "FiraCode Nerd Font", monospace;
+    font-size: 15px;
+    color: $color_templ12;
+    background-color: $background;
+    margin: 5px 8px 5px 0px;
+    border-radius: 12px;
+    font-weight: bold;
+    padding: 1px 8px;
+}
+
+#workspaces button.active, #workspaces button.focused {
+    background: $color_templ5;
+    color: $background;
+    padding: 4px 20px;
+}
+
+#workspaces button.inactive {
+    background-color: $background;
+    color: $color_templ7;
+}
+
+#window {
+    color: $color_templ8;
+    background-color: $background;
+    border-radius: 15px;
+    margin: 5px 3px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+#idle_inhibitor {
+    color: $color_templ6;
+    background-color: $background;
+    border-radius: 15px;
+    margin: 5px 3px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+#custom-notifications {
+    color: $color_templ11;
+    background-color: $background;
+    border-radius: 15px;
+    margin: 5px 3px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+#language {
+    color: $color_templ8;
+    background-color: $background;
+    border-radius: 15px;
+    margin: 5px 3px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+#custom-power, #custom-lock {
+    color: $color_templ9;
+    background-color: $background;
+    border-radius: 15px;
+    margin: 5px 10px 5px 5px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+#battery {
+    transition: background-color 0.5s ease-in-out;
+    color: $color_templ14;
+    background-color: $background;
+    border-radius: 15px;
+    margin: 5px 3px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+#battery.charging {
+  animation: pulse-charging 5s infinite alternate ease-in-out;
+}
+
+@keyframes pulse-charging {
+  from {
+    background-color: $background;
+  }
+  to {
+    background-color: rgba(166, 227, 161, 0.7);
+  }
+}
+
+#battery.warning:not(.charging) {
+  animation: pulse-warning 5s infinite alternate ease-in-out;
+  color: $color_templ13;
+}
+
+@keyframes pulse-warning {
+  from {
+    background-color: $background;
+  }
+  to {
+    background-color: rgba(255, 165, 0, 0.5);
+  }
+}
+
+#battery.critical:not(.charging) {
+  animation: pulse 1s infinite alternate ease-in-out;
+  color: $color_templ4;
+}
+
+@keyframes pulse {
+  from {
+    background-color: $background;
+  }
+  to {
+    background-color: rgba(255, 0, 0, 1);
+  }
+}
+
+#custom-gentoo, #clock, #custom-windowiconizer {
+    color: $color_templ10;
+    background-color: $background;
+    border-radius: 15px;
+    margin: 5px 3px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+#cpu, #disk, #memory, #temperature {
+    color: $color_templ15;
+    background-color: $background;
+    border-radius: 15px;
+    margin: 5px 3px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+#cpu.warning, #disk.warning, #memory.warning, #temperature.warning {
+  animation: pulse-warning 1.5s infinite alternate ease-in-out;
+}
+
+#cpu.critical, #disk.critical, #memory.critical, #temperature.critical {
+  animation: pulse-critical 1s infinite alternate ease-in-out;
+}
+
+@keyframes pulse-warning {
+  from {
+    background-color: $background;
+  }
+  to {
+    background-color: rgba(255, 100, 0, 1);
+  }
+}
+
+@keyframes pulse-critical {
+  from {
+    background-color: rgba(255, 50, 50, 0.7);
+  }
+  to {
+    background-color: rgba(255, 0, 0, 1);
+  }
+}
+
+#pulseaudio, #network, #backlight {
+    color: $color_templ6;
+    background-color: $background;
+    border-radius: 15px;
+    margin: 5px 3px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+#custom-cava {
+    color: $color_templ9;
+    background-color: $background;
+    border-radius: 15px;
+    font-family: "FiraCode Nerd Font", monospace;
+    font-size: 15px;
+    margin: 5px 3px;
+    padding: 6px 12px;
+    font-weight: bold;
+    min-width: 100px;
+}
+
+#custom-wallpaper-carousel {
+  background-color: $background;
+  font-family: "FiraCode Nerd Font", monospace;
+  color: $color_templ11;
+  border-radius: 15px;
+  padding: 6px 12px;
+  font-weight: bold;
+  margin: 5px 3px;
+}
+

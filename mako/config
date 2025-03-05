@@ -1,0 +1,18 @@
+max-history=1000
+font=FiraCode Nerd Font 12
+background-color=#1c1c1c
+width=500
+height=100
+border-size=4
+border-color=#6e56af
+border-radius=10
+progress-color=over #b0bec5
+icons=1
+text-alignment=center
+default-timeout=5000
+anchor=top-center
+
+
+[actionable=true]
+on-button-right=exec makoctl dismiss
+
