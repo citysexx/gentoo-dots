@@ -1,18 +1,26 @@
-max-history=1000
-font=FiraCode Nerd Font 12
-background-color=#1c1c1c
-width=500
-height=100
-border-size=4
-border-color=#6e56af
-border-radius=10
-progress-color=over #b0bec5
+# Colors
+
+background-color=#0d0d15
+text-color=#70738A
+border-color=#7E8199
+progress-color=over #313244
 icons=1
-text-alignment=center
-default-timeout=5000
 anchor=top-center
+text-alignment=center
+history=1
+max-history=5000
+width=750
+height=200
+border-radius=15
+border-size=3
+max-icon-size=64
+font=FiraCode Nerd Font 12
+layer=overlay
+actions=0
+margin=0
+default-timeout=20000
+max-visible=5
 
-
-[actionable=true]
-on-button-right=exec makoctl dismiss
-
+[urgency=high]
+border-color=#fab387
+default-timeout=60000

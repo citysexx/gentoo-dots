@@ -10,11 +10,16 @@ if [[ ! -d "$DIR" ]]; then
 fi
 
 # Get a random file
-FILE=$(find "$DIR" -type f | shuf -n 1)
+#FILE=$(find "$DIR" -type f | shuf -n 1)
+
+# Get chosen file with rofi
+FILE=$(bash $HOME/.config/hypr/scripts/wallpaper-manuchoose.sh)
 
 # Check if a file was found
 if [[ -z "$FILE" ]]; then
-    echo "No files found in the directory."
+    echo "No file selected"
+    notify-send "No file was selected, quitting..."
+    exit 0
 else
     notify-send "Changing style..."
     killall hyprpaper
@@ -23,6 +28,10 @@ else
     echo "Random file: $FILE"
     hyprctl hyprpaper reload ,"$FILE"
     wal -i $FILE -n # needs Pywal package
+    echo "sending seds to the hyprpaper config..."
+    echo "preload = $FILE" > /home/citysexx/.config/hypr/hyprpaper.conf
+    echo "wallpaper = , $FILE" >> /home/citysexx/.config/hypr/hyprpaper.conf
+    echo "splash = false" >> /home/citysexx/.config/hypr/hyprpaper.conf
 fi
 source ~/.cache/wal/colors.sh
 
@@ -136,7 +145,29 @@ sed -e "s/\$color0/$(/home/citysexx/.config/hypr/scripts/hex-to-rgb.sh $color0)/
     /home/citysexx/.config/hypr/hyprcolors.conf.template > /home/citysexx/.config/hypr/hyprcolors.conf
 hyprctl reload
 
-mkdir -p /home/citysexx/Documents/anacron
-touch /home/citysexx/Documents/anacron/.anacron.log
-echo "Anacron ran at $(date)" >> /home/citysexx/Documents/anacron/.anacron.log
+# updating mako with colors and reload it
+sed -e "s/\$color0/$color0/g" \
+    -e "s/\$color1/$color1/g" \
+    -e "s/\$color2/$color2/g" \
+    -e "s/\$color3/$color3/g" \
+    -e "s/\$color4/$color4/g" \
+    -e "s/\$color5/$color5/g" \
+    -e "s/\$color6/$color6/g" \
+    -e "s/\$color7/$color7/g" \
+    -e "s/\$color8/$color8/g" \
+    -e "s/\$color9/$color9/g" \
+    -e "s/\$colora/$color10/g" \
+    -e "s/\$colorb/$color11/g" \
+    -e "s/\$colorc/$color12/g" \
+    -e "s/\$colord/$color13/g" \
+    -e "s/\$colore/$color14/g" \
+    -e "s/\$colorf/$color15/g" \
+    -e "s/\$background/$background/g" \
+    /home/citysexx/.config/mako/config.template > /home/citysexx/.config/mako/config
+
+makoctl reload
+
+#mkdir -p /home/citysexx/Documents/anacron
+#touch /home/citysexx/Documents/anacron/.anacron.log
+#echo "Anacron ran at $(date)" >> /home/citysexx/Documents/anacron/.anacron.log
 notify-send "Style changed!"
