@@ -6,82 +6,82 @@ endif
 
 " Background and foreground
 set background=dark
-hi Normal guifg=#bfc1cb guibg=#0d0d15         " Bright text on dark background
-hi NormalNC guifg=#7E8199 guibg=#515468       " Non-current windows with soft color
-hi Comment guifg=#85878e gui=italic            " Dimmed comments, italicized
-hi CursorLine guibg=#5E6176                   " Highlighted line with moderate color
-hi CursorColumn guibg=#63667B                 " Highlighted column with subtle color
+hi Normal guifg=#c0c0c1 guibg=#030409         " Bright text on dark background
+hi NormalNC guifg=#6FFBFD guibg=#be1e39       " Non-current windows with soft color
+hi Comment guifg=#535366 gui=italic            " Dimmed comments, italicized
+hi CursorLine guibg=#09516e                   " Highlighted line with moderate color
+hi CursorColumn guibg=#b74f6c                 " Highlighted column with subtle color
 
 " Line numbers and status line
-hi LineNr guifg=#bfc1cb                       " Dimmed line numbers
-hi CursorLineNr guifg=#bfc1cb guibg=#5E6176  " Current line number in bright color
-hi StatusLine guibg=#70738A guifg=#bfc1cb    " Active status line with clear contrast
-hi StatusLineNC guibg=#70738A guifg=#515468   " Inactive status line with softer colors
+hi LineNr guifg=#888c94                       " Dimmed line numbers
+hi CursorLineNr guifg=#c0c0c1 guibg=#09516e  " Current line number in bright color
+hi StatusLine guibg=#0d889e guifg=#c0c0c1    " Active status line with clear contrast
+hi StatusLineNC guibg=#12B6D3 guifg=#FE294C   " Inactive status line with softer colors
 
 " Visual mode highlights with basic defaults
-hi Visual guibg=#5E6176 guifg=#0d0d15        " Light selection for contrast
-hi VisualNOS guibg=#70738A guifg=#0d0d15      " Non-selected text in Visual mode
+hi Visual guibg=#0D6C93 guifg=#030409        " Light selection for contrast
+hi VisualNOS guibg=#0d889e guifg=#030409      " Non-selected text in Visual mode
 
 " Search highlights
-hi Search guibg=#515468 guifg=#0d0d15         " Highlight searches with a vivid red
-hi IncSearch guibg=#63667B guifg=#0d0d15     " Incremental search with vibrant yellow
+hi Search guibg=#FE294C guifg=#030409         " Highlight searches with a vivid red
+hi IncSearch guibg=#F46A91 guifg=#030409     " Incremental search with vibrant yellow
 
 " Error highlighting
-hi Error guifg=#515468                        " Errors in bright red
-hi ErrorMsg guibg=#515468 guifg=#bfc1cb      " Error messages with bright foreground
-hi WarningMsg guifg=#63667B                   " Warning messages in yellow
-hi MoreMsg guifg=#70738A                      " "More" messages with blue
-hi NonText guifg=#bfc1cb                      " Non-text characters in dimmed color
+hi Error guifg=#be1e39                        " Errors in bright red
+hi ErrorMsg guibg=#be1e39 guifg=#c0c0c1      " Error messages with bright foreground
+hi WarningMsg guifg=#b74f6c                   " Warning messages in yellow
+hi MoreMsg guifg=#12B6D3                      " "More" messages with blue
+hi NonText guifg=#888c94                      " Non-text characters in dimmed color
 
 " Syntax highlighting
-hi Keyword guifg=#70738A                      " Keywords in bright cyan
-hi Statement guifg=#7E8199                    " Statements in bright magenta
-hi Function guifg=#8F90AA                     " Functions in light blue
-hi Identifier guifg=#bfc1cb                   " Identifiers in standard white
-hi Type guifg=#85878e                         " Types in light gray
-hi PreProc guifg=#515468                      " Preprocessors in light red
-hi Constant guifg=#5E6176                    " Constants in bright green
-hi Special guifg=#63667B                     " Special elements in bright yellow
-hi Operator guifg=#70738A                    " Operators in bright purple
-hi Title guifg=#7E8199                       " Titles in bright orange
-hi SpecialKey guifg=#8F90AA                  " Special keys in bright blue
-hi Underlined guifg=#bfc1cb gui=underline    " Underlined text in bright white
+hi Keyword guifg=#0d889e                      " Keywords in bright cyan
+hi Statement guifg=#53bcbd                    " Statements in bright magenta
+hi Function guifg=#61bfbe                     " Functions in light blue
+hi Identifier guifg=#888c94                   " Identifiers in standard white
+hi Type guifg=#535366                         " Types in light gray
+hi PreProc guifg=#FE294C                      " Preprocessors in light red
+hi Constant guifg=#0D6C93                    " Constants in bright green
+hi Special guifg=#F46A91                     " Special elements in bright yellow
+hi Operator guifg=#12B6D3                    " Operators in bright purple
+hi Title guifg=#6FFBFD                       " Titles in bright orange
+hi SpecialKey guifg=#82FFFE                  " Special keys in bright blue
+hi Underlined guifg=#c0c0c1 gui=underline    " Underlined text in bright white
 
 " String and characters
-hi String guifg=#7E8199                      " Strings in orange
-hi Character guifg=#8F90AA                   " Characters in teal
-hi Number guifg=#bfc1cb                      " Numbers in bright white
-hi Boolean guifg=#0d0d15                      " Booleans in dark black
+hi String guifg=#6FFBFD                      " Strings in orange
+hi Character guifg=#82FFFE                   " Characters in teal
+hi Number guifg=#c0c0c1                      " Numbers in bright white
+hi Boolean guifg=#030409                      " Booleans in dark black
 
 " Diff mode highlighting
-hi DiffAdd guibg=#5E6176 guifg=#bfc1cb       " Added lines in green
-hi DiffChange guibg=#63667B guifg=#bfc1cb    " Changed lines in blue
-hi DiffDelete guibg=#515468 guifg=#bfc1cb    " Deleted lines in red
-hi DiffText guibg=#70738A guifg=#bfc1cb      " Changed text in cyan
+hi DiffAdd guibg=#09516e guifg=#c0c0c1       " Added lines in green
+hi DiffChange guibg=#b74f6c guifg=#c0c0c1    " Changed lines in blue
+hi DiffDelete guibg=#be1e39 guifg=#c0c0c1    " Deleted lines in red
+hi DiffText guibg=#0d889e guifg=#c0c0c1      " Changed text in cyan
 
 " Sign column
-hi SignColumn guibg=#7E8199 guifg=#8F90AA     " Signs in purple
-hi Delimiters guifg=#bfc1cb                   " Delimiters in gray
+hi SignColumn guibg=$background guifg=#09516e     " Signs in purple
+hi Delimiters guifg=#888c94                   " Delimiters in gray
 
 " Filetype specific highlights
-hi NvimTreeNormal guifg=#85878e guibg=#0d0d15  " Background and foreground for NvimTree
-hi NvimTreeFolderName guifg=#515468           " Folder names with a bold color
-hi NvimTreeFolderIcon guifg=#5E6176          " Folder icons color
-hi NvimTreeIndentMarker guifg=#bfc1cb         " Indentation markers in gray
+hi NvimTreeNormal guifg=#535366 guibg=#030409  " Background and foreground for NvimTree
+hi NvimTreeFolderName guifg=#FE294C           " Folder names with a bold color
+hi NvimTreeFolderIcon guifg=#0D6C93          " Folder icons color
+hi NvimTreeIndentMarker guifg=#888c94         " Indentation markers in gray
 
 " Tab line highlights
-hi TabLine guibg=#63667B guifg=#0d0d15       " Tab line with darker background
-hi TabLineSel guibg=#70738A guifg=#bfc1cb   " Selected tab in bright color
-hi TabLineFill guibg=#7E8199 guifg=#0d0d15   " Fill area of tab line (inactive)
+hi TabLine guibg=#F46A91 guifg=#030409       " Tab line with darker background
+hi TabLineSel guibg=#12B6D3 guifg=#c0c0c1   " Selected tab in bright color
+hi TabLineFill guibg=#6FFBFD guifg=#030409   " Fill area of tab line (inactive)
 
 " Pmenu (popup menu) highlights
-hi Pmenu guibg=#8F90AA guifg=#0d0d15         " Popup menu background and text color
-hi PmenuSel guibg=#bfc1cb guifg=#0d0d15      " Selected item in popup menu
-hi PmenuThumb guibg=#8F90AA                   " Scrollbar color in popup menus
+hi Pmenu guibg=#82FFFE guifg=#030409         " Popup menu background and text color
+hi PmenuSel guibg=#c0c0c1 guifg=#030409      " Selected item in popup menu
+hi PmenuThumb guibg=#61bfbe                   " Scrollbar color in popup menus
 
 " Additional customizations for a more dynamic appearance
-hi VertSplit guifg=#85878e guibg=#0d0d15       " Vertical splits
-hi StatusLineTerm guifg=#bfc1cb guibg=#5E6176 " Terminal status line with a bright highlight
-hi FloatBorder guifg=#bfc1cb guibg=#85878e    " Floating windows' border color
-hi NormalNC guifg=#bfc1cb guibg=#0d0d15        " Non-current windows' normal text and background
+hi VertSplit guifg=#535366 guibg=#030409       " Vertical splits
+hi StatusLineTerm guifg=#c0c0c1 guibg=#09516e " Terminal status line with a bright highlight
+hi FloatBorder guifg=#c0c0c1 guibg=#535366    " Floating windows' border color
+hi NormalNC guifg=#888c94 guibg=#030409        " Non-current windows' normal text and background
 

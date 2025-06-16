@@ -60,7 +60,7 @@ hi DiffDelete guibg=$color1 guifg=$colorf    " Deleted lines in red
 hi DiffText guibg=$color4 guifg=$colorf      " Changed text in cyan
 
 " Sign column
-hi SignColumn guibg=$color5 guifg=$color6     " Signs in purple
+hi SignColumn guibg=$background guifg=$color2     " Signs in purple
 hi Delimiters guifg=$color7                   " Delimiters in gray
 
 " Filetype specific highlights

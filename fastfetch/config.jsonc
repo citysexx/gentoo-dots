@@ -58,17 +58,32 @@
             "type": "gpu"
         },
         {
-            "key": "│ {#34}󰉉 disk    {#keys}│",
+            "key": "│ {#34}󰉉 root    {#keys}│",
             "type": "disk",
-            "folders": "/:/home"
+            "folders": "/"
         },
         {
-            "key": "│ {#35} memory  {#keys}│",
+            "key": "│ {#34}󰉉 home    {#keys}│",
+            "type": "disk",
+            "folders": "/home"
+        },
+        {
+            "key": "│ {#34}󰉉 dist    {#keys}│",
+            "type": "disk",
+            "folders": "/var/cache/distfiles"
+        },
+        {
+            "key": "│ {#34}󰉉 tbld    {#keys}│",
+            "type": "disk",
+            "folders": "/var/tmp/portage"
+        },
+        {
+            "key": "│ {#35} memory  {#keys}│",
             "type": "memory"
         },
         {
             "type": "swap",
-            "key": "│ {#35} swap    {#keys}│"
+            "key": "│ {#35} zswap   {#keys}│"
         },
         {
             "key": "├───────────┤",

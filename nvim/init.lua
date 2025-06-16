@@ -38,3 +38,5 @@ vim.cmd('colorscheme customcurrent')
 vim.schedule(function()
   require "mappings"
 end)
+require("custom")
+vim.opt.signcolumn = "auto"

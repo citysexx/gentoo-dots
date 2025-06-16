@@ -13,6 +13,12 @@ I have been ricing this and forgot to create a backup, had to start over again
 ## Something Unforgivable
 My Gentoo world compiles for 28 hours (without chromium). So i do rarely update the system. And do backups of my configs and emerge logs before i do. But gentoo is stable for real.
 
+## Note
+Newer rices include different set of packages needed. For example, as of June, I no longer use mako and dunst as notification daemons. I use swaync.
+
+## hypr/scripts
+This is a good scripts dir that i created to handle some tasks, i kindly share then with you.
+
 ## Prerequisites:
 - Amd64-architecture computer
 - It is assumed you have installed Gentoo Linux using AMD64 Handbook and set up a minimal recommended configuartion described in this Handbook
@@ -25,8 +31,9 @@ My Gentoo world compiles for 28 hours (without chromium). So i do rarely update 
     - `gojq`
     - `wofi`
     - `tofi`
-    - `dunst`
+    - `rofi`
     - `ranger`
+    - `swaync`
     - `neovim`
     - `noto-emoji`
     - `kitty`
