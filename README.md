@@ -2,7 +2,7 @@
 Dotfiles and install advices for Gentoo Linux x Hyprland setup
 
 ## Sexy looks
-![alt text](https://github.com/citysexx/gentoo-dots/blob/main/2024-11-03-233347_hyprshot.png?raw=true)
+![alt text](2025-06-16-211827_hyprshot.png)
 
 ## Something Beautiful
 This has already been configured to use pywal (you can swich themes and colors will adjust in terminal, neovim and waybar)
